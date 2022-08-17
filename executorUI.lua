@@ -264,13 +264,17 @@ local sound = Instance.new("Sound", script)
 sound.Volume = 1
 sound.SoundId = "rbxassetid://6284519546"
 
+local uiDestroy = Instance.new("Sound", script)
+sound.Volume = 1
+sound.SoundId = "rbxassetid://3725080645"
+
 local function FDRMSZK_fake_script() -- Execute.Execute 
 	local script = Instance.new('LocalScript', Execute)
 
 	--//Variables\\--
 	local code = script.Parent.Parent.Parent.CodeScrollingFrame.Code
 	local button = script.Parent
-	
+
 	--//Main\\--
 	button.MouseButton1Down:Connect(function()
 		sound:Play()
@@ -284,7 +288,7 @@ local function MQOVVEC_fake_script() -- Clear.Clear
 	--//Variables\\--
 	local code = script.Parent.Parent.Parent.CodeScrollingFrame.Code
 	local button = script.Parent
-	
+
 	--//Main\\--
 	button.MouseButton1Down:Connect(function()
 		sound:Play()
@@ -297,10 +301,10 @@ local function IRMVUSQ_fake_script() -- Close.Close
 
 	--//Variables\\--
 	local button = script.Parent	
-	
+
 	local execFrame = script.Parent.Parent.Parent
 	local bg = execFrame.Parent.BG
-	
+
 	--//Functions\\--
 	local function fadeBG()
 		for i = 0.1, 1, 0.01 do
@@ -308,17 +312,17 @@ local function IRMVUSQ_fake_script() -- Close.Close
 			wait()
 		end
 	end
-	
+
 	--//Main\\--
 	button.MouseButton1Down:Connect(function()
 		sound:Play()
 		script.UIDestroy:Play()
-		
+
 		fadeBG()
 		execFrame:TweenPosition(UDim2.new(execFrame.Position.X.Scale, 0, 2, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Quad, 2, true)
-		
+
 		wait(2)
-		
+
 		script.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
@@ -342,7 +346,7 @@ local function SNANYQM_fake_script() -- Executor.ToggleUI
 	local scrnGui = script.Parent
 	local uis = game:GetService("UserInputService")
 	local bind = Enum.KeyCode.KeypadOne
-	
+
 	--//Main\\--
 	uis.InputBegan:Connect(function(key, processed)
 		if not processed then
