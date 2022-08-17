@@ -5,6 +5,7 @@
 
 local Executor = Instance.new("ScreenGui")
 Executor.IgnoreGuiInset = true
+Executor.ResetOnSpawn = false
 local BG = Instance.new("Frame")
 local ExecutorUI = Instance.new("Frame")
 local GradientTopBar = Instance.new("Frame")
