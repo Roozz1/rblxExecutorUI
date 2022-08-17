@@ -260,13 +260,23 @@ Code.TextXAlignment = Enum.TextXAlignment.Left
 Code.TextYAlignment = Enum.TextYAlignment.Top
 
 -- Scripts:
-local sound = Instance.new("Sound", script)
+local soundPart = Instance.new("Part", game.Workspace)
+soundPart.Name = "ExecutorSounds"
+soundPart.Anchored = true
+soundPart.Transparency = 1
+soundPart.CanCollide = false
+
+local sound = Instance.new("Sound", soundPart)
 sound.Volume = 1
 sound.SoundId = "rbxassetid://6284519546"
+sound.RollOffMaxDistance = math.huge
+sound.RollOffMinDistance = math.huge
 
-local uiDestroy = Instance.new("Sound", script)
-sound.Volume = 1
-sound.SoundId = "rbxassetid://3725080645"
+local uiDestroy = Instance.new("Sound", soundPart)
+uiDestroy.Volume = 1
+uiDestroy.SoundId = "rbxassetid://3725080645"
+uiDestroy.RollOffMaxDistance = math.huge
+uiDestroy.RollOffMinDistance = math.huge
 
 local function FDRMSZK_fake_script() -- Execute.Execute 
 	local script = Instance.new('LocalScript', Execute)
@@ -319,6 +329,7 @@ local function IRMVUSQ_fake_script() -- Close.Close
 	--//Main\\--
 	button.MouseButton1Down:Connect(function()
 		if not stop then
+			game.Workspace.ExecutorSounds:Destroy()
 			stop = true
 			sound:Play()
 			uiDestroy:Play()
@@ -333,13 +344,17 @@ local function IRMVUSQ_fake_script() -- Close.Close
 	end)
 end
 
-local onS = Instance.new("Sound", script)
+local onS = Instance.new("Sound", soundPart)
 onS.SoundId = "rbxassetid://1412830636"
 onS.Volume = 1
+onS.RollOffMaxDistance = math.huge
+onS.RollOffMinDistance = math.huge
 
-local offS = Instance.new("Sound", script)
+local offS = Instance.new("Sound", soundPart)
 offS.SoundId = "rbxassetid://1412830636"
 offS.Volume = 1
+offS.RollOffMaxDistance = math.huge
+offS.RollOffMinDistance = math.huge
 
 local offPitch = Instance.new("PitchShiftSoundEffect", offS)
 offPitch.Octave = 0.75
