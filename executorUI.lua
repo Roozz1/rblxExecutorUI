@@ -91,7 +91,6 @@ Title.Text = "Roo's Executor UI"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextScaled = true
 Title.TextSize = 14.000
-Title.TextWrapped = true
 
 UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(11, 11, 11)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(26, 26, 26))}
 UIGradient_3.Rotation = 45
