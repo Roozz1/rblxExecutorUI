@@ -259,7 +259,6 @@ Code.TextColor3 = Color3.fromRGB(0, 221, 255)
 Code.TextSize = 14.000
 Code.TextXAlignment = Enum.TextXAlignment.Left
 Code.TextYAlignment = Enum.TextYAlignment.Top
-Code.TextWrapped = true
 Code.ClearTextOnFocus = false
 
 -- Scripts:
