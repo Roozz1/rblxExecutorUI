@@ -267,13 +267,13 @@ soundPart.Transparency = 1
 soundPart.CanCollide = false
 
 local sound = Instance.new("Sound", soundPart)
-sound.Volume = 1
+sound.Volume = 4
 sound.SoundId = "rbxassetid://6284519546"
 sound.RollOffMaxDistance = math.huge
 sound.RollOffMinDistance = math.huge
 
 local uiDestroy = Instance.new("Sound", soundPart)
-uiDestroy.Volume = 1
+uiDestroy.Volume = 4
 uiDestroy.SoundId = "rbxassetid://3725080645"
 uiDestroy.RollOffMaxDistance = math.huge
 uiDestroy.RollOffMinDistance = math.huge
@@ -346,13 +346,13 @@ end
 
 local onS = Instance.new("Sound", soundPart)
 onS.SoundId = "rbxassetid://1412830636"
-onS.Volume = 1
+onS.Volume = 4
 onS.RollOffMaxDistance = math.huge
 onS.RollOffMinDistance = math.huge
 
 local offS = Instance.new("Sound", soundPart)
 offS.SoundId = "rbxassetid://1412830636"
-offS.Volume = 1
+offS.Volume = 4
 offS.RollOffMaxDistance = math.huge
 offS.RollOffMinDistance = math.huge
 
