@@ -295,6 +295,9 @@ local function MQOVVEC_fake_script() -- Clear.Clear
 		code.Text = ""
 	end)
 end
+
+local stop = false
+
 coroutine.wrap(MQOVVEC_fake_script)()
 local function IRMVUSQ_fake_script() -- Close.Close 
 	local script = Instance.new('LocalScript', Close)
@@ -315,15 +318,18 @@ local function IRMVUSQ_fake_script() -- Close.Close
 
 	--//Main\\--
 	button.MouseButton1Down:Connect(function()
-		sound:Play()
-		uiDestroy:Play()
+		if not stop then
+			stop = true
+			sound:Play()
+			uiDestroy:Play()
 
-		fadeBG()
-		execFrame:TweenPosition(UDim2.new(execFrame.Position.X.Scale, 0, 2, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Quad, 2, true)
+			fadeBG()
+			execFrame:TweenPosition(UDim2.new(execFrame.Position.X.Scale, 0, 2, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Quad, 2, true)
 
-		wait(2)
+			wait(2)
 
-		script.Parent.Parent.Parent.Parent:Destroy()
+			script.Parent.Parent.Parent.Parent:Destroy()
+		end
 	end)
 end
 
