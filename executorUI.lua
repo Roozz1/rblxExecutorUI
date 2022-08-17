@@ -316,7 +316,7 @@ local function IRMVUSQ_fake_script() -- Close.Close
 	--//Main\\--
 	button.MouseButton1Down:Connect(function()
 		sound:Play()
-		script.UIDestroy:Play()
+		uiDestroy:Play()
 
 		fadeBG()
 		execFrame:TweenPosition(UDim2.new(execFrame.Position.X.Scale, 0, 2, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Quad, 2, true)
