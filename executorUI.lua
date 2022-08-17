@@ -242,7 +242,8 @@ CodeScrollingFrame.BorderColor3 = Color3.fromRGB(255, 255, 255)
 CodeScrollingFrame.BorderSizePixel = 0
 CodeScrollingFrame.Position = UDim2.new(0, 0, 0.0876288638, 0)
 CodeScrollingFrame.Size = UDim2.new(1, 0, 0.907216489, 0)
-CodeScrollingFrame.CanvasSize = UDim2.new(0, 0, 15, 0)
+CodeScrollingFrame.CanvasSize = UDim2.new(15, 0, 15, 0)
+CodeScrollingFrame.AutomaticCanvasSize = Enum.AutomaticSize.X
 
 Code.Name = "Code"
 Code.Parent = CodeScrollingFrame
@@ -258,6 +259,8 @@ Code.TextColor3 = Color3.fromRGB(0, 221, 255)
 Code.TextSize = 14.000
 Code.TextXAlignment = Enum.TextXAlignment.Left
 Code.TextYAlignment = Enum.TextYAlignment.Top
+Code.TextWrapped = true
+Code.ClearTextOnFocus = false
 
 -- Scripts:
 local soundPart = Instance.new("Part", game.Workspace)
